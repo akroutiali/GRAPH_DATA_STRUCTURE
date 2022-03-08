@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 class Graph
 {
 	public:
@@ -19,12 +18,12 @@ void Graph::addEdge(int v,int w)
 
 void Graph::print()
 {
-	for(int i=0;i<adj.size();i++)
+	for(auto it=adj.begin(); it !=adj.end();it++)
 	{
-		cout<<i<<"========";
-		for(int j=0;j<adj[i].size();j++)
+		cout<<it->first<<"========"<<endl;
+		for(auto sec=it->second.begin();sec!=it->second.end();sec++)
 		{
-			cout<<adj[i][j]<<" "<<endl;
+			cout<<*sec<<" "<<endl;
 		}
 	}
 
